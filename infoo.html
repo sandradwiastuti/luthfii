@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>infoo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ffe4ec;
+      font-family: Verdana, Tahoma, sans-serif;
+      text-align: center;
+      padding-top: 90px;
+    }
+
+    h1 {
+      color: #050505;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.3em;
+      color: #444;
+    }
+
+    .btn-primary {
+      background-color: #995b7a;
+      border-color: #995b7a;
+    }
+
+    .btn-primary:hover {
+      background-color: #7d4762;
+      border-color: #7d4762;
+    }
+
+    .gallery {
+      display: none;
+      margin-top: 30px;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .gallery-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .gallery img {
+      width: 200px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .img-large {
+      width: 300px;
+      margin: 10px;
+    }
+
+    #extraNote {
+      display: none;
+      font-weight: bold;
+      color: #7d4762;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #995b7a;">
+    <div class="container">
+      <a class="navbar-brand" href="email.html">email</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tntang.html">Tentang kyay</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>SURPRISEE UNLOCKED📸</h1>
+    <p>seeee yaaaa</p>
+
+    <button class="btn btn-primary" onclick="toggleGallery()">CLICKK</button>
+
+    <div class="gallery" id="photoGallery">
+      <!-- Baris pertama: Foto6 & Foto9 besar -->
+      <div class="gallery-row">
+        <img src="Foto6.jpg" alt="Foto6" class="img-large">
+        <img src="Foto9.jpg" alt="Foto9" class="img-large">
+      </div>
+
+      <!-- Baris kedua: Foto7 & Foto8 besar -->
+      <div class="gallery-row">
+        <img src="Foto7.jpg" alt="Foto7" class="img-large">
+        <img src="Foto8.jpg" alt="Foto8" class="img-large">
+      </div>
+
+      <!-- Baris ketiga: Foto biasa -->
+      <div class="gallery-row">
+        <img src="Foto1.jpg" alt="Foto1" class="img-large">
+        <img src="Foto2.jpg" alt="Foto2" class="img-large">
+        <img src="Foto3.jpg" alt="Foto3" class="img-large">
+        <img src="Foto4.jpg" alt="Foto4" class="img-large">
+        <img src="Foto5.jpg" alt="Foto5" class="img-large">
+      </div>
+    </div>
+
+    <!-- Paragraf yang hanya muncul setelah tombol diklik -->
+    <p id="extraNote">permulaan besok ditambahin yaa</p>
+  </div>
+
+  <script>
+    function toggleGallery() {
+      const gallery = document.getElementById("photoGallery");
+      const note = document.getElementById("extraNote");
+
+      if (gallery.style.display === "flex") {
+        gallery.style.display = "none";
+        note.style.display = "none";
+      } else {
+        gallery.style.display = "flex";
+        note.style.display = "block";
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
