@@ -1,162 +1,187 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>luthfi</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Tentang Dia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Kanit:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      text-align: center;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Kanit:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    nav {
+      background: rgba(8, 44, 143, 0.445);
+      padding: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      z-index: 100;
+    }
 
-  <style>
-    body {
-      text-align: center;
-    }
+    nav a {
+      text-decoration: none;
+      color: #ffffffdd;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
 
-    .profile-pic {
-      width: 200px;
-      height: 250px;
-      border-radius: 30px;
-      object-fit: cover;
-      margin: 30px auto;
-      display: block;
-      border: 5px solid #ffffffaa;
-      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
-      transition: transform 0.8s ease, box-shadow 0.8s ease;
-      transform-origin: center;
-    }
+    nav a:hover {
+      color: #87cefa;
+    }
 
-    .profile-pic:hover {
-      transform: scale(1.07) rotate(360deg);
-      box-shadow:
-        0 0 15px #4a90e2,
-        0 0 30px #660505,
-        0 0 60px #ff0000;
-    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
 
-    .quote {
-      font-family: 'Kanit', sans-serif;
-      font-size: 1.3rem;
-      color: #272e33;
-      margin: 20px auto;
-      max-width: 600px;
-    }
+    h1, h2 {
+      color: #272e33;
+      margin: 0;
+    }
 
-    .about-button {
-      display: inline-block;
-      margin-top: 5px;
-      padding: 12px 28px;
-      background-color: #514f94;
-      color: rgb(24, 22, 22);
-      border: none;
-      border-radius: 25px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.3s ease;
-    }
+    h2 {
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
 
-    .about-button:hover {
-      background-color: #b46aa8;
-    }
+    .profile-pic {
+      width: 70%;
+      max-width: 220px;
+      height: auto;
+      border-radius: 30px;
+      object-fit: cover;
+      margin: 20px auto;
+      display: block;
+      border: 4px solid #ffffffaa;
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+      transition: transform 0.8s ease, box-shadow 0.8s ease;
+    }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-      padding: 10px;
-    }
+    .profile-pic:hover {
+      transform: scale(1.07) rotate(360deg);
+      box-shadow:
+        0 0 15px #4a90e2,
+        0 0 30px #660505,
+        0 0 60px #ff0000;
+    }
 
-    /* Hamburger menu style */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      padding: 10px;
-    }
+    .quote {
+      font-family: 'Kanit', sans-serif;
+      font-size: 1rem;
+      color: #272e33;
+      margin: 20px auto;
+      max-width: 600px;
+    }
 
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background-color: black;
-      margin: 4px;
-    }
+    .about-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 28px;
+      background-color: #514f94;
+      color: rgb(24, 22, 22);
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        background-color: #f3f3f3;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        z-index: 99;
-      }
+    .about-button:hover {
+      background-color: #b46aa8;
+    }
 
-      nav.active {
-        display: flex;
-      }
+    .footer {
+      margin-top: 50px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.1);
+      color: #272e33;
+      font-size: 0.9rem;
+    }
 
-      .hamburger {
-        display: flex;
-        justify-content: flex-end;
-        position: absolute;
-        top: 10px;
-        right: 20px;
-      }
-    }
+    .social-icons {
+      margin-top: 10px;
+    }
 
-  </style>
+    .social-icons a {
+      margin: 0 10px;
+      color: #272e33;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .social-icons a:hover {
+      color: #4a90e2;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1rem;
+      }
+
+      .about-button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
+
+      .quote {
+        font-size: 0.95rem;
+      }
+
+      .social-icons a {
+        display: block;
+        margin: 5px 0;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Him</a>
+    <a href="cool.html">He’s Friend</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="message.html">Message</a>
+  </nav>
 
-  <!-- Hamburger Button -->
-  <div class="hamburger" onclick="toggleMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
+  <div class="container">
+    <h1>Muhammad Luthfi Handika</h1>
+    <h2>cheMiCal maN</h2>
 
-  <!-- Navigasi -->
-  <nav id="navbar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Him</a>
-    <a href="cool.html">He’s Friend</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="message.html">Message</a>
-  </nav>
+    <img src="hi.jpg" alt="Foto Dia" class="profile-pic">
 
-  <div class="container">
-    <h1>Muhammad Luthfi Handika</h1>
-    <h2>CheMiCal MaN</h2>
+    <div class="quote">
+      ciaoo
+    </div>
 
-    <img src="hi.jpg" alt="Foto Dia" class="profile-pic">
+    <a href="playlist.html" class="about-button">Playlist</a>
+  </div>
 
-    <div class="quote">
-      ciaoo
-    </div>
-
-    <a href="playlist.html" class="about-button">Playlist</a>
-  </div>
-
-  <footer class="footer">
-    <p>connect with him 💬</p>
-    <div class="social-icons">
-      <a href="https://www.youtube.com/@muhammadluthfihandika6293" target="_blank">YouTube</a>
-      <a href="https://www.instagram.com/mhmmdluthfihnd/" target="_blank">Instagram</a>
-      <a href="https://www.linkedin.com/in/muhammad-luthfi-handika-62a866233/?originalSubdomain=id" target="_blank">LinkedIn</a>
-    </div>
-  </footer>
-
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('navbar');
-      nav.classList.toggle('active');
-    }
-  </script>
+  <footer class="footer">
+    <p>connect with him 💬</p>
+    <div class="social-icons">
+      <a href="https://www.youtube.com/@muhammadluthfihandika6293" target="_blank">YouTube</a>
+      <a href="https://www.instagram.com/mhmmdluthfihnd/" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/in/muhammad-luthfi-handika-62a866233/?originalSubdomain=id" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
 
 </body>
 </html>
