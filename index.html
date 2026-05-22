@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background:linear-gradient(to bottom, #f8fbff, #dbeafe);
+      color:#1e293b;
+      min-height:100vh;
+      text-align:center;
+    }
+
+    /* NAVBAR */
+    nav{
+      display:flex;
+      justify-content:center;
+      gap:30px;
+      padding:24px;
+      background:rgba(255,255,255,0.65);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(148,163,184,0.15);
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#475569;
+      font-size:15px;
+      font-weight:500;
+      transition:0.3s ease;
+    }
+
+    nav a:hover{
+      color:#2563eb;
+    }
+
+    /* CONTENT */
+    .container{
+      padding:90px 20px 60px;
+    }
+
+    h1{
+      font-size:28px;
+      font-weight:500;
+      color:#0f172a;
+      margin-bottom:30px;
+      letter-spacing:0.3px;
+    }
+
+    /* AVATAR */
+    .profile-pic{
+      width:160px;
+      height:160px;
+      border-radius:50%;
+      object-fit:cover;
+      display:block;
+      margin:0 auto 28px;
+      border:5px solid rgba(255,255,255,0.9);
+      box-shadow:0 10px 30px rgba(59,130,246,0.12);
+      transition:0.3s ease;
+    }
+
+    .profile-pic:hover{
+      transform:scale(1.03);
+    }
+
+    /* QUOTE */
+    .quote{
+      max-width:550px;
+      margin:0 auto;
+      font-size:15px;
+      line-height:1.8;
+      color:#64748b;
+    }
+
+    /* BUTTON */
+    .about-button{
+      display:inline-block;
+      margin-top:35px;
+      padding:12px 32px;
+      border-radius:30px;
+      text-decoration:none;
+      background:#60a5fa;
+      color:white;
+      font-size:14px;
+      font-weight:500;
+      transition:0.3s ease;
+      box-shadow:0 10px 25px rgba(96,165,250,0.2);
+    }
+
+    .about-button:hover{
+      background:#3b82f6;
+      transform:translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer{
+      margin-top:100px;
+      padding:35px 20px;
+      background:rgba(255,255,255,0.55);
+      backdrop-filter:blur(8px);
+      border-top:1px solid rgba(148,163,184,0.12);
+    }
+
+    footer p{
+      color:#64748b;
+      margin-bottom:18px;
+      font-size:14px;
+    }
+
+    .social-icons{
+      display:flex;
+      justify-content:center;
+      gap:22px;
+      flex-wrap:wrap;
+    }
+
+    .social-icons a{
+      color:#334155;
+      text-decoration:none;
+      font-size:14px;
+      transition:0.3s ease;
+    }
+
+    .social-icons a:hover{
+      color:#2563eb;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Him</a>
+    <a href="cool.html">He’s Friend</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="message.html">Message</a>
+  </nav>
+
+  <div class="container">
+
+    <h1>name</h1>
+
+    <!-- AVATAR -->
+    <img 
+      src="https://api.dicebear.com/7.x/adventurer/svg?seed=Luthfi"
+      alt="Avatar"
+      class="profile-pic"
+    >
+
+    <div class="quote">
+  there are no memories left here anymore.
+</div>
+
+    <a href="playlist.html" class="about-button">
+      Playlist
+    </a>
+
+  </div>
+
+  
+
+</body>
+</html>
